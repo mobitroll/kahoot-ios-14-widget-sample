@@ -42,7 +42,7 @@ struct KahootWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: 0) {
             GeometryReader { geometryProxy in
                 Image("DummyImage")
                     .resizable()
@@ -53,11 +53,13 @@ struct KahootWidgetEntryView : View {
             VStack(alignment: .leading) {
                 Text("TOP PICKS")
                     .font(.custom("Montserrat", size: 11, relativeTo: .title))
+                    .foregroundColor(Color(red: 110/255, green: 110/255, blue: 110/255))
                     .bold()
                 Text("World architecture")
                     .font(.custom("Montserrat", size: 12, relativeTo: .body))
-                    .bold()
-            }.padding()
+
+            }.padding(EdgeInsets(top: 4, leading: 16, bottom: 16, trailing: 16))
+
         }
     }
 }
