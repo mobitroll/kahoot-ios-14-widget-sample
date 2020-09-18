@@ -44,8 +44,12 @@ struct KahootWidgetEntryView : View {
     var body: some View {
         VStack {
             Image("DummyImage")
-            Text("TOP PICKS")
-            Text("World architecture")
+                .resizable()
+                .scaledToFill()
+            VStack(alignment: .leading) {
+                Text("TOP PICKS")
+                Text("World architecture")
+            }.padding()
         }
     }
 }
