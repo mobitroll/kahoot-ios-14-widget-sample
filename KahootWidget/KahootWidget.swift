@@ -42,10 +42,14 @@ struct KahootWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Image("DummyImage")
-                .resizable()
-                .scaledToFill()
+        VStack(spacing: 0) {
+            GeometryReader { geometryProxy in
+                Image("DummyImage")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometryProxy.size.width, height: geometryProxy.size.height)
+                    .clipped()
+            }
             VStack(alignment: .leading) {
                 Text("TOP PICKS")
                 Text("World architecture")
