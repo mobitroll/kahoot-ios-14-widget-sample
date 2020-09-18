@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25371F5F2514DEED0037FDD0 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25371F5E2514DEED0037FDD0 /* Montserrat-Bold.ttf */; };
 		259AE66B2514CFA8006B40EA /* KahootApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259AE66A2514CFA8006B40EA /* KahootApp.swift */; };
 		259AE66D2514CFA8006B40EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259AE66C2514CFA8006B40EA /* ContentView.swift */; };
 		259AE66F2514CFA8006B40EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259AE66E2514CFA8006B40EA /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25371F5E2514DEED0037FDD0 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		259AE6672514CFA8006B40EA /* Kahoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kahoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259AE66A2514CFA8006B40EA /* KahootApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KahootApp.swift; sourceTree = "<group>"; };
 		259AE66C2514CFA8006B40EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		259AE6842514CFEC006B40EA /* KahootWidget */ = {
 			isa = PBXGroup;
 			children = (
+				25371F5E2514DEED0037FDD0 /* Montserrat-Bold.ttf */,
 				259AE6852514CFEC006B40EA /* KahootWidget.swift */,
 				259AE6872514CFED006B40EA /* Assets.xcassets */,
 				259AE6892514CFED006B40EA /* Info.plist */,
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25371F5F2514DEED0037FDD0 /* Montserrat-Bold.ttf in Resources */,
 				259AE6882514CFED006B40EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

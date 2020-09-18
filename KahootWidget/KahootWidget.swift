@@ -52,7 +52,11 @@ struct KahootWidgetEntryView : View {
             }
             VStack(alignment: .leading) {
                 Text("TOP PICKS")
+                    .font(.custom("Montserrat", size: 11, relativeTo: .title))
+                    .bold()
                 Text("World architecture")
+                    .font(.custom("Montserrat", size: 12, relativeTo: .body))
+                    .bold()
             }.padding()
         }
     }
