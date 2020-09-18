@@ -47,18 +47,31 @@ struct KahootWidgetEntryView : View {
                 Image("DummyImage")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: geometryProxy.size.width, height: geometryProxy.size.height)
+                    .frame(width: geometryProxy.size.width,
+                           height: geometryProxy.size.height)
                     .clipped()
+                    .overlay(
+                        Text("6 Qs")
+                            .font(.custom("Montserrat", size: 12, relativeTo: .title))
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(4)
+                            .background(Color("NumberOfQsBackground"))
+                            .cornerRadius(4)
+                            .padding(8)
+                        , alignment: .bottomTrailing)
             }
             VStack(alignment: .leading) {
                 Text("TOP PICKS")
                     .font(.custom("Montserrat", size: 11, relativeTo: .title))
                     .bold()
                     .foregroundColor(Color("Title"))
+                    .lineLimit(1)
                 Text("World architecture")
                     .font(.custom("Montserrat", size: 12, relativeTo: .body))
                     .bold()
                     .foregroundColor(Color("Body"))
+                    .lineLimit(2)
 
             }
             .padding(EdgeInsets(top: 4, leading: 16, bottom: 16, trailing: 16))
@@ -87,29 +100,8 @@ struct KahootWidgetSmallView_Previews: PreviewProvider {
         ForEach(ColorScheme.allCases, id: \.self) { colorScheme in
             KahootWidgetEntryView(entry: SimpleEntry(date: Date()))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            .environment(\.colorScheme, colorScheme)
+                .environment(\.colorScheme, colorScheme)
 
         }
     }
 }
-
-/*
-struct DiscoverGroupSmallViewPlaceholder_Previews: PreviewProvider {
-    static var previews: some View {
-        let shortTitle = "Short title"
-        let longTitle = "Lorem ipsum dolor sit amet consectetur adipiscing elit."
-        let username = "n/a"
-
-        ForEach(ColorScheme.allCases, id: \.self) { colorScheme in
-
-            KahootWidgetEntryView(entry: SimpleEntry(date: Date()))
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
-            .environment(\.colorScheme, ColorScheme.dark)
-                .redacted(reason: .placeholder)
-
-
-        }
-
-    }
-}
-*/
