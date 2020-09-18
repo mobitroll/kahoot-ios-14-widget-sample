@@ -53,14 +53,18 @@ struct KahootWidgetEntryView : View {
             VStack(alignment: .leading) {
                 Text("TOP PICKS")
                     .font(.custom("Montserrat", size: 11, relativeTo: .title))
-                    .foregroundColor(Color(red: 110/255, green: 110/255, blue: 110/255))
                     .bold()
+                    .foregroundColor(Color("Title"))
                 Text("World architecture")
                     .font(.custom("Montserrat", size: 12, relativeTo: .body))
+                    .bold()
+                    .foregroundColor(Color("Body"))
 
-            }.padding(EdgeInsets(top: 4, leading: 16, bottom: 16, trailing: 16))
+            }
+            .padding(EdgeInsets(top: 4, leading: 16, bottom: 16, trailing: 16))
 
-        }
+        }.background(Color("Background"))
+
     }
 }
 
@@ -77,9 +81,35 @@ struct KahootWidget: Widget {
     }
 }
 
-struct KahootWidget_Previews: PreviewProvider {
+struct KahootWidgetSmallView_Previews: PreviewProvider {
     static var previews: some View {
-        KahootWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+
+        ForEach(ColorScheme.allCases, id: \.self) { colorScheme in
+            KahootWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .environment(\.colorScheme, colorScheme)
+
+        }
     }
 }
+
+/*
+struct DiscoverGroupSmallViewPlaceholder_Previews: PreviewProvider {
+    static var previews: some View {
+        let shortTitle = "Short title"
+        let longTitle = "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        let username = "n/a"
+
+        ForEach(ColorScheme.allCases, id: \.self) { colorScheme in
+
+            KahootWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .environment(\.colorScheme, ColorScheme.dark)
+                .redacted(reason: .placeholder)
+
+
+        }
+
+    }
+}
+*/
