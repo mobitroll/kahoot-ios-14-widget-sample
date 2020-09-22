@@ -27,7 +27,7 @@ struct MediumWidgetView: View {
             }
             GeometryReader { geometryProxy in
                 HStack {
-                    Image("DummyImage")
+                    discoverGroup.coverImage
                         .resizable()
                         .scaledToFill()
                         .frame(width: geometryProxy.size.width/3,

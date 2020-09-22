@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiscoverGroup {
     let cardTitle: String
-    let coverImage: Image?
+    let coverImage: Image
     let creatorAvatarImage: Image?
     let creatorUsername: String
     let groupTitle: String
