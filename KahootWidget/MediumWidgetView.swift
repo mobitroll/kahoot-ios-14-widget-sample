@@ -14,17 +14,7 @@ struct MediumWidgetView: View {
 
     var body: some View {
         VStack {
-            HStack(spacing: 5) {
-                Image("DiscoverGroupIcon")
-                Text(discoverGroup.groupTitle)
-                    .font(.custom("Montserrat", size: 11, relativeTo: .headline))
-                    .bold()
-                    .lineLimit(2)
-                    .textCase(.uppercase)
-                Spacer()
-                Image("K!Logo")
-                    .unredacted()
-            }
+            HeaderView(title: discoverGroup.groupTitle)
             GeometryReader { geometryProxy in
                 HStack {
                     discoverGroup.coverImage

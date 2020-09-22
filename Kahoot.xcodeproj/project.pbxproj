@@ -21,6 +21,7 @@
 		25B344972519EE0100F8DC18 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344962519EE0100F8DC18 /* MediumWidgetView.swift */; };
 		25B3449B2519FA3600F8DC18 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3449A2519FA3600F8DC18 /* View+Extensions.swift */; };
 		25B3449F2519FBF100F8DC18 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3449E2519FBF100F8DC18 /* SmallWidgetView.swift */; };
+		25B344A3251A0EC600F8DC18 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344A2251A0EC600F8DC18 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		25B344962519EE0100F8DC18 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 		25B3449A2519FA3600F8DC18 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		25B3449E2519FBF100F8DC18 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
+		25B344A2251A0EC600F8DC18 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				259AE6852514CFEC006B40EA /* KahootWidget.swift */,
 				25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */,
 				25B344962519EE0100F8DC18 /* MediumWidgetView.swift */,
+				25B344A2251A0EC600F8DC18 /* HeaderView.swift */,
 				25B3449E2519FBF100F8DC18 /* SmallWidgetView.swift */,
 				25B3449A2519FA3600F8DC18 /* View+Extensions.swift */,
 				259AE6872514CFED006B40EA /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B344972519EE0100F8DC18 /* MediumWidgetView.swift in Sources */,
+				25B344A3251A0EC600F8DC18 /* HeaderView.swift in Sources */,
 				25B344932519ED5C00F8DC18 /* DiscoverGroup.swift in Sources */,
 				25B3449B2519FA3600F8DC18 /* View+Extensions.swift in Sources */,
 				25B3449F2519FBF100F8DC18 /* SmallWidgetView.swift in Sources */,
