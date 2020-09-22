@@ -68,7 +68,10 @@ struct MediumWidgetView_Previews: PreviewProvider {
                                           groupTitle: "Top picks",
                                           numberOfQuestions: 6)
 
-        MediumWidgetView(discoverGroup: discoverGroup)
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+        ForEach(ColorScheme.allCases, id: \.self) { colorScheme in
+            MediumWidgetView(discoverGroup: discoverGroup)
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .environment(\.colorScheme, colorScheme)
+        }
     }
 }
