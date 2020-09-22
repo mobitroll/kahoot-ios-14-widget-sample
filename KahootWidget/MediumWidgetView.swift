@@ -33,6 +33,7 @@ struct MediumWidgetView: View {
                         .frame(width: geometryProxy.size.width/3,
                                height: geometryProxy.size.height)
                         .clipped()
+                        .numberOfQuestions(discoverGroup.numberOfQuestions)
                     VStack(alignment: .leading) {
                         Text(discoverGroup.cardTitle)
                             .font(.custom("Montserrat", size: 14, relativeTo: .title))

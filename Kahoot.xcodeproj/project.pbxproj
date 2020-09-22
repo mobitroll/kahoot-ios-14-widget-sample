@@ -19,6 +19,7 @@
 		259AE68C2514CFED006B40EA /* KahootWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 259AE67E2514CFEC006B40EA /* KahootWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		25B344932519ED5C00F8DC18 /* DiscoverGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */; };
 		25B344972519EE0100F8DC18 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344962519EE0100F8DC18 /* MediumWidgetView.swift */; };
+		25B3449B2519FA3600F8DC18 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3449A2519FA3600F8DC18 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		259AE6892514CFED006B40EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverGroup.swift; sourceTree = "<group>"; };
 		25B344962519EE0100F8DC18 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
+		25B3449A2519FA3600F8DC18 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				259AE6852514CFEC006B40EA /* KahootWidget.swift */,
 				25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */,
 				25B344962519EE0100F8DC18 /* MediumWidgetView.swift */,
+				25B3449A2519FA3600F8DC18 /* View+Extensions.swift */,
 				259AE6872514CFED006B40EA /* Assets.xcassets */,
 				259AE6892514CFED006B40EA /* Info.plist */,
 			);
@@ -256,6 +259,7 @@
 			files = (
 				25B344972519EE0100F8DC18 /* MediumWidgetView.swift in Sources */,
 				25B344932519ED5C00F8DC18 /* DiscoverGroup.swift in Sources */,
+				25B3449B2519FA3600F8DC18 /* View+Extensions.swift in Sources */,
 				259AE6862514CFEC006B40EA /* KahootWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
