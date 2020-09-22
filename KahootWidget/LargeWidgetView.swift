@@ -53,9 +53,13 @@ struct LargeWidgetView: View {
                     }
                 }
                 .padding(8)
+
+
             }
             .background(Color("CardBackground"))
             .cornerRadius(4)
+
+            ButtonRowView()
 
         }
         .padding()
