@@ -13,17 +13,39 @@ struct MediumWidgetView: View {
     let discoverGroup: DiscoverGroup
 
     var body: some View {
-        HStack(spacing: 5) {
-            Image("DiscoverGroupIcon")
-            Text(discoverGroup.groupTitle)
-                .font(.custom("Montserrat", size: 11, relativeTo: .headline))
-                .bold()
-                .lineLimit(2)
-                .textCase(.uppercase)
-            Spacer()
-            Image("K!Logo")
-                .unredacted()
+        VStack {
+            HStack(spacing: 5) {
+                Image("DiscoverGroupIcon")
+                Text(discoverGroup.groupTitle)
+                    .font(.custom("Montserrat", size: 11, relativeTo: .headline))
+                    .bold()
+                    .lineLimit(2)
+                    .textCase(.uppercase)
+                Spacer()
+                Image("K!Logo")
+                    .unredacted()
+            }
+            HStack {
+                Image("DummyImage")
+                    .resizable()
+                VStack(alignment: .leading) {
+                    Text(discoverGroup.cardTitle)
+                        .font(.custom("Montserrat", size: 14, relativeTo: .title))
+                        .bold()
+                        .foregroundColor(Color("Gray5"))
+                    Spacer()
+                    Text(discoverGroup.creatorUsername)
+                        .font(.custom("Montserrat", size: 14, relativeTo: .title))
+                        .bold()
+                        .lineLimit(1)
+                        .foregroundColor(Color("Gray4"))
+                }
+            }
+            .background(Color("CardBackground"))
+            .cornerRadius(4)
         }
+        .padding()
+        .background(Color("MediumAndLargeWidgetBackground"))
     }
 }
 

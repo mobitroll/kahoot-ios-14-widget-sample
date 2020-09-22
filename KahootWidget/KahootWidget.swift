@@ -65,12 +65,12 @@ struct KahootWidgetEntryView : View {
                 Text("TOP PICKS")
                     .font(.custom("Montserrat", size: 11, relativeTo: .title))
                     .bold()
-                    .foregroundColor(Color("Title"))
+                    .foregroundColor(Color("Gray4"))
                     .lineLimit(1)
                 Text("World architecture")
                     .font(.custom("Montserrat", size: 12, relativeTo: .body))
                     .bold()
-                    .foregroundColor(Color("Body"))
+                    .foregroundColor(Color("Gray5"))
                     .lineLimit(2)
 
             }
