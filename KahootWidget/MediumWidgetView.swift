@@ -25,24 +25,32 @@ struct MediumWidgetView: View {
                 Image("K!Logo")
                     .unredacted()
             }
-            HStack {
-                Image("DummyImage")
-                    .resizable()
-                VStack(alignment: .leading) {
-                    Text(discoverGroup.cardTitle)
-                        .font(.custom("Montserrat", size: 14, relativeTo: .title))
-                        .bold()
-                        .foregroundColor(Color("Gray5"))
-                    Spacer()
-                    Text(discoverGroup.creatorUsername)
-                        .font(.custom("Montserrat", size: 14, relativeTo: .title))
-                        .bold()
-                        .lineLimit(1)
-                        .foregroundColor(Color("Gray4"))
+            GeometryReader { geometryProxy in
+                HStack {
+                    Image("DummyImage")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geometryProxy.size.width/3,
+                               height: geometryProxy.size.height)
+                        .clipped()
+                    VStack(alignment: .leading) {
+                        Text(discoverGroup.cardTitle)
+                            .font(.custom("Montserrat", size: 14, relativeTo: .title))
+                            .bold()
+                            .foregroundColor(Color("Gray5"))
+                        Spacer()
+                        Text(discoverGroup.creatorUsername)
+                            .font(.custom("Montserrat", size: 14, relativeTo: .title))
+                            .bold()
+                            .lineLimit(1)
+                            .foregroundColor(Color("Gray4"))
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(8)
                 }
+                .background(Color("CardBackground"))
+                .cornerRadius(4)
             }
-            .background(Color("CardBackground"))
-            .cornerRadius(4)
         }
         .padding()
         .background(Color("MediumAndLargeWidgetBackground"))
