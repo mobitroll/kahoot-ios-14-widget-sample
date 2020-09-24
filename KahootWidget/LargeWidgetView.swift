@@ -81,6 +81,7 @@ struct LargeWidgetView_Previews: PreviewProvider {
             LargeWidgetView(discoverGroup: discoverGroup)
                 .previewContext(WidgetPreviewContext(family: .systemLarge))
                 .environment(\.colorScheme, colorScheme)
+                .redacted(reason: .placeholder)
         }
     }
 }
