@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		25371F5F2514DEED0037FDD0 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25371F5E2514DEED0037FDD0 /* Montserrat-Bold.ttf */; };
+		254D38E0251C7C65008679EB /* URLSession+fetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38D5251C7C65008679EB /* URLSession+fetchImage.swift */; };
+		254D38E1251C7C65008679EB /* RemoteDiscoverGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38D7251C7C65008679EB /* RemoteDiscoverGroups.swift */; };
+		254D38E2251C7C65008679EB /* DiscoverGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38D8251C7C65008679EB /* DiscoverGroup.swift */; };
+		254D38E3251C7C65008679EB /* ButtonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38DA251C7C65008679EB /* ButtonRowView.swift */; };
+		254D38E4251C7C65008679EB /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38DB251C7C65008679EB /* MediumWidgetView.swift */; };
+		254D38E5251C7C65008679EB /* LargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38DC251C7C65008679EB /* LargeWidgetView.swift */; };
+		254D38E6251C7C65008679EB /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38DD251C7C65008679EB /* SmallWidgetView.swift */; };
+		254D38E7251C7C65008679EB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38DE251C7C65008679EB /* HeaderView.swift */; };
+		254D38E8251C7C65008679EB /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D38DF251C7C65008679EB /* View+Extensions.swift */; };
 		259AE66B2514CFA8006B40EA /* KahootApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259AE66A2514CFA8006B40EA /* KahootApp.swift */; };
 		259AE66D2514CFA8006B40EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259AE66C2514CFA8006B40EA /* ContentView.swift */; };
 		259AE66F2514CFA8006B40EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259AE66E2514CFA8006B40EA /* Assets.xcassets */; };
@@ -17,15 +26,6 @@
 		259AE6862514CFEC006B40EA /* KahootWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259AE6852514CFEC006B40EA /* KahootWidget.swift */; };
 		259AE6882514CFED006B40EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259AE6872514CFED006B40EA /* Assets.xcassets */; };
 		259AE68C2514CFED006B40EA /* KahootWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 259AE67E2514CFEC006B40EA /* KahootWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		25B344932519ED5C00F8DC18 /* DiscoverGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */; };
-		25B344972519EE0100F8DC18 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344962519EE0100F8DC18 /* MediumWidgetView.swift */; };
-		25B3449B2519FA3600F8DC18 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3449A2519FA3600F8DC18 /* View+Extensions.swift */; };
-		25B3449F2519FBF100F8DC18 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3449E2519FBF100F8DC18 /* SmallWidgetView.swift */; };
-		25B344A3251A0EC600F8DC18 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344A2251A0EC600F8DC18 /* HeaderView.swift */; };
-		25B344A7251A0FA600F8DC18 /* LargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344A6251A0FA600F8DC18 /* LargeWidgetView.swift */; };
-		25B344AD251A12E200F8DC18 /* ButtonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344AC251A12E200F8DC18 /* ButtonRowView.swift */; };
-		25B344B1251A179800F8DC18 /* RemoteDiscoverGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344B0251A179800F8DC18 /* RemoteDiscoverGroups.swift */; };
-		25B344B5251A289B00F8DC18 /* URLSession+fetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B344B4251A289B00F8DC18 /* URLSession+fetchImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +54,15 @@
 
 /* Begin PBXFileReference section */
 		25371F5E2514DEED0037FDD0 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		254D38D5251C7C65008679EB /* URLSession+fetchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+fetchImage.swift"; sourceTree = "<group>"; };
+		254D38D7251C7C65008679EB /* RemoteDiscoverGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDiscoverGroups.swift; sourceTree = "<group>"; };
+		254D38D8251C7C65008679EB /* DiscoverGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverGroup.swift; sourceTree = "<group>"; };
+		254D38DA251C7C65008679EB /* ButtonRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRowView.swift; sourceTree = "<group>"; };
+		254D38DB251C7C65008679EB /* MediumWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
+		254D38DC251C7C65008679EB /* LargeWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeWidgetView.swift; sourceTree = "<group>"; };
+		254D38DD251C7C65008679EB /* SmallWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
+		254D38DE251C7C65008679EB /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		254D38DF251C7C65008679EB /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		259AE6672514CFA8006B40EA /* Kahoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kahoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259AE66A2514CFA8006B40EA /* KahootApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KahootApp.swift; sourceTree = "<group>"; };
 		259AE66C2514CFA8006B40EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,15 +75,6 @@
 		259AE6852514CFEC006B40EA /* KahootWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KahootWidget.swift; sourceTree = "<group>"; };
 		259AE6872514CFED006B40EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		259AE6892514CFED006B40EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverGroup.swift; sourceTree = "<group>"; };
-		25B344962519EE0100F8DC18 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
-		25B3449A2519FA3600F8DC18 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		25B3449E2519FBF100F8DC18 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
-		25B344A2251A0EC600F8DC18 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		25B344A6251A0FA600F8DC18 /* LargeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetView.swift; sourceTree = "<group>"; };
-		25B344AC251A12E200F8DC18 /* ButtonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRowView.swift; sourceTree = "<group>"; };
-		25B344B0251A179800F8DC18 /* RemoteDiscoverGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDiscoverGroups.swift; sourceTree = "<group>"; };
-		25B344B4251A289B00F8DC18 /* URLSession+fetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+fetchImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +97,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254D38D4251C7C65008679EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				254D38D5251C7C65008679EB /* URLSession+fetchImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		254D38D6251C7C65008679EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				254D38D7251C7C65008679EB /* RemoteDiscoverGroups.swift */,
+				254D38D8251C7C65008679EB /* DiscoverGroup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		254D38D9251C7C65008679EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				254D38DA251C7C65008679EB /* ButtonRowView.swift */,
+				254D38DB251C7C65008679EB /* MediumWidgetView.swift */,
+				254D38DC251C7C65008679EB /* LargeWidgetView.swift */,
+				254D38DD251C7C65008679EB /* SmallWidgetView.swift */,
+				254D38DE251C7C65008679EB /* HeaderView.swift */,
+				254D38DF251C7C65008679EB /* View+Extensions.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		259AE65E2514CFA8006B40EA = {
 			isa = PBXGroup;
 			children = (
@@ -149,18 +179,12 @@
 			isa = PBXGroup;
 			children = (
 				259AE6872514CFED006B40EA /* Assets.xcassets */,
-				25B344AC251A12E200F8DC18 /* ButtonRowView.swift */,
-				25B344922519ED5C00F8DC18 /* DiscoverGroup.swift */,
-				25B344A2251A0EC600F8DC18 /* HeaderView.swift */,
 				259AE6892514CFED006B40EA /* Info.plist */,
 				259AE6852514CFEC006B40EA /* KahootWidget.swift */,
-				25B344A6251A0FA600F8DC18 /* LargeWidgetView.swift */,
-				25B344962519EE0100F8DC18 /* MediumWidgetView.swift */,
+				254D38D4251C7C65008679EB /* Extensions */,
+				254D38D6251C7C65008679EB /* Models */,
+				254D38D9251C7C65008679EB /* Views */,
 				25371F5E2514DEED0037FDD0 /* Montserrat-Bold.ttf */,
-				25B344B0251A179800F8DC18 /* RemoteDiscoverGroups.swift */,
-				25B3449E2519FBF100F8DC18 /* SmallWidgetView.swift */,
-				25B344B4251A289B00F8DC18 /* URLSession+fetchImage.swift */,
-				25B3449A2519FA3600F8DC18 /* View+Extensions.swift */,
 			);
 			path = KahootWidget;
 			sourceTree = "<group>";
@@ -275,16 +299,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25B344972519EE0100F8DC18 /* MediumWidgetView.swift in Sources */,
-				25B344A3251A0EC600F8DC18 /* HeaderView.swift in Sources */,
-				25B344932519ED5C00F8DC18 /* DiscoverGroup.swift in Sources */,
-				25B344B1251A179800F8DC18 /* RemoteDiscoverGroups.swift in Sources */,
-				25B344A7251A0FA600F8DC18 /* LargeWidgetView.swift in Sources */,
-				25B3449B2519FA3600F8DC18 /* View+Extensions.swift in Sources */,
-				25B3449F2519FBF100F8DC18 /* SmallWidgetView.swift in Sources */,
-				25B344AD251A12E200F8DC18 /* ButtonRowView.swift in Sources */,
+				254D38E6251C7C65008679EB /* SmallWidgetView.swift in Sources */,
+				254D38E7251C7C65008679EB /* HeaderView.swift in Sources */,
+				254D38E3251C7C65008679EB /* ButtonRowView.swift in Sources */,
+				254D38E1251C7C65008679EB /* RemoteDiscoverGroups.swift in Sources */,
 				259AE6862514CFEC006B40EA /* KahootWidget.swift in Sources */,
-				25B344B5251A289B00F8DC18 /* URLSession+fetchImage.swift in Sources */,
+				254D38E5251C7C65008679EB /* LargeWidgetView.swift in Sources */,
+				254D38E4251C7C65008679EB /* MediumWidgetView.swift in Sources */,
+				254D38E2251C7C65008679EB /* DiscoverGroup.swift in Sources */,
+				254D38E8251C7C65008679EB /* View+Extensions.swift in Sources */,
+				254D38E0251C7C65008679EB /* URLSession+fetchImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,9 @@ struct Provider: TimelineProvider {
                                           creatorUsername: "------",
                                           groupTitle: "--------",
                                           numberOfQuestions: 10)
-        return WidgetTimelineEntry(date: Date(), discoverGroup: discoverGroup)
+        return WidgetTimelineEntry(date: Date(),
+                                   discoverGroup: discoverGroup,
+                                   widgetURL: URL(string: "https://kahoot.com")!)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (WidgetTimelineEntry) -> ()) {
@@ -29,7 +31,9 @@ struct Provider: TimelineProvider {
                                           groupTitle: "Top picks",
                                           numberOfQuestions: 6)
 
-        let entry = WidgetTimelineEntry(date: Date(), discoverGroup: discoverGroup)
+        let entry = WidgetTimelineEntry(date: Date(),
+                                        discoverGroup: discoverGroup,
+                                        widgetURL: URL(string: "https://kahoot.com")!)
         completion(entry)
     }
 
@@ -160,8 +164,11 @@ struct Provider: TimelineProvider {
                     numberOfQuestions: data.card.numberOfQuestions
                 )
 
+                let widgetURL = URL(string: "kahoot://quiz/\(data.card.uuid)")!
+
                 let entry = WidgetTimelineEntry(date: Date(),
-                                                discoverGroup: discoverGroup)
+                                                discoverGroup: discoverGroup,
+                                                widgetURL: widgetURL)
 
                 let date = Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
                 let timeline = Timeline(entries: [entry], policy: TimelineReloadPolicy.after(date))
@@ -177,6 +184,7 @@ struct Provider: TimelineProvider {
 struct WidgetTimelineEntry: TimelineEntry {
     let date: Date
     let discoverGroup: DiscoverGroup
+    let widgetURL: URL
 }
 
 struct KahootWidgetEntryView : View {
@@ -184,17 +192,18 @@ struct KahootWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        switch widgetFamily {
-        case .systemSmall:
-            SmallWidgetView(discoverGroup: entry.discoverGroup)
-        case .systemMedium:
-            MediumWidgetView(discoverGroup: entry.discoverGroup)
-        case .systemLarge:
-            LargeWidgetView(discoverGroup: entry.discoverGroup)
-        @unknown default:
-            fatalError()
-        }
-
+        Group {
+            switch widgetFamily {
+            case .systemSmall:
+                SmallWidgetView(discoverGroup: entry.discoverGroup)
+            case .systemMedium:
+                MediumWidgetView(discoverGroup: entry.discoverGroup)
+            case .systemLarge:
+                LargeWidgetView(discoverGroup: entry.discoverGroup)
+            @unknown default:
+                fatalError()
+            }
+        }.widgetURL(entry.widgetURL)
     }
 }
 

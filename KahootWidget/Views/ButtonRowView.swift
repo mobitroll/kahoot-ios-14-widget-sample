@@ -9,10 +9,10 @@ import SwiftUI
 import WidgetKit
 
 struct LinkButtonView: View {
-    var imageName: String
+    let imageName: String
     var shadow: Bool = false
-    var text: String
-    var url: URL
+    let text: String
+    let url: URL
 
     var body: some View {
         Link(destination: url) {
