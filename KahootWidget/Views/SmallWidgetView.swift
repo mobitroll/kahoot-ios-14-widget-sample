@@ -11,7 +11,6 @@ import SwiftUI
 import WidgetKit
 
 struct SmallWidgetView: View {
-
     let discoverGroup: DiscoverGroup
 
     var body: some View {
@@ -37,19 +36,14 @@ struct SmallWidgetView: View {
                     .bold()
                     .foregroundColor(Color("Gray5"))
                     .lineLimit(2)
-
             }
             .padding(EdgeInsets(top: 4, leading: 16, bottom: 16, trailing: 16))
-
         }.background(Color("SmallWidgetBackground"))
-
     }
-
 }
 
 struct MediumWidgetSmall_Previews: PreviewProvider {
     static var previews: some View {
-
         let discoverGroup = DiscoverGroup(cardTitle: "World architecture",
                                           coverImage: Image("DummyImage"),
                                           creatorAvatarImage: nil,

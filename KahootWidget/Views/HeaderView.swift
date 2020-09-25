@@ -9,7 +9,6 @@ import SwiftUI
 import WidgetKit
 
 struct HeaderView: View {
-    
     let title: String
 
     var body: some View {

@@ -9,7 +9,6 @@ import SwiftUI
 import WidgetKit
 
 struct MediumWidgetView: View {
-
     let discoverGroup: DiscoverGroup
 
     var body: some View {
@@ -20,7 +19,7 @@ struct MediumWidgetView: View {
                     discoverGroup.coverImage
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geometryProxy.size.width/3,
+                        .frame(width: geometryProxy.size.width / 3,
                                height: geometryProxy.size.height)
                         .clipped()
                         .numberOfQuestions(discoverGroup.numberOfQuestions)
@@ -50,7 +49,6 @@ struct MediumWidgetView: View {
 
 struct MediumWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-
         let discoverGroup = DiscoverGroup(cardTitle: "World architecture",
                                           coverImage: Image("DummyImage"),
                                           creatorAvatarImage: nil,

@@ -6,11 +6,11 @@
 //
 
 import Combine
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> WidgetTimelineEntry {
+    func placeholder(in _: Context) -> WidgetTimelineEntry {
         let discoverGroup = DiscoverGroup(cardTitle: "------------",
                                           coverImage: Image("DummyImage"),
                                           creatorAvatarImage: nil,
@@ -22,8 +22,7 @@ struct Provider: TimelineProvider {
                                    widgetURL: URL(string: "https://kahoot.com")!)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (WidgetTimelineEntry) -> ()) {
-
+    func getSnapshot(in _: Context, completion: @escaping (WidgetTimelineEntry) -> Void) {
         let discoverGroup = DiscoverGroup(cardTitle: "World architecture",
                                           coverImage: Image("DummyImage"),
                                           creatorAvatarImage: nil,
@@ -37,23 +36,16 @@ struct Provider: TimelineProvider {
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-
+    func getTimeline(in _: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         DispatchQueue.main.async {
-
-            self.downloadDiscoverGroup({ result in
-
+            self.downloadDiscoverGroup { result in
                 guard let data = try? result.get() else { return }
                 self.createDiscoverGroupTimeline(data, completion: completion)
-
-            })
-
+            }
         }
-
     }
 
     private func downloadDiscoverGroup(_ completion: @escaping (Result<Data, Error>) -> Void) {
-
         let url = URL(string: "https://create.kahoot.it/rest/campaigns/discovergroups/")!
 
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -82,9 +74,6 @@ struct Provider: TimelineProvider {
                 // No-op
             }
         }.resume()
-
-
-
     }
 
     private func createDiscoverGroupTimeline(_ data: Data, completion: @escaping (Timeline<Entry>) -> Void) {
@@ -112,39 +101,29 @@ struct Provider: TimelineProvider {
 
             // Download cover and avatar image
 
-
             URLSession.shared.dataTask(with: data.card.cover) { data, _, _ in
-
                 if let data = data {
                     coverUIImage = UIImage(data: data)
                 }
 
                 dispatchGroup.leave()
-
             }.resume()
 
             if let creatorAvatarImageURL = data.card.creatorAvatar?.url {
-
-
                 URLSession.shared.dataTask(with: creatorAvatarImageURL) { data, _, _ in
-
                     if let data = data {
                         creatorAvatarUIImage = UIImage(data: data)
                     }
 
                     dispatchGroup.leave()
-
                 }.resume()
-
             } else {
                 dispatchGroup.leave()
             }
 
             dispatchGroup.notify(queue: DispatchQueue.main) {
-
                 guard let coverUIImage = coverUIImage else { return }
                 let coverImage = Image(uiImage: coverUIImage)
-
 
                 let creatorAvatarImage: Image?
 
@@ -153,7 +132,6 @@ struct Provider: TimelineProvider {
                 } else {
                     creatorAvatarImage = nil
                 }
-
 
                 let discoverGroup = DiscoverGroup(
                     cardTitle: data.card.title,
@@ -176,7 +154,7 @@ struct Provider: TimelineProvider {
                 completion(timeline)
             }
         } catch {
-           // No-op
+            // No-op
         }
     }
 }
@@ -187,7 +165,7 @@ struct WidgetTimelineEntry: TimelineEntry {
     let widgetURL: URL
 }
 
-struct KahootWidgetEntryView : View {
+struct KahootWidgetEntryView: View {
     @Environment(\.widgetFamily) private var widgetFamily
     var entry: Provider.Entry
 
@@ -196,8 +174,10 @@ struct KahootWidgetEntryView : View {
             switch widgetFamily {
             case .systemSmall:
                 SmallWidgetView(discoverGroup: entry.discoverGroup)
+
             case .systemMedium:
                 MediumWidgetView(discoverGroup: entry.discoverGroup)
+
             case .systemLarge:
                 LargeWidgetView(discoverGroup: entry.discoverGroup)
             @unknown default:

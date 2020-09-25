@@ -11,8 +11,8 @@ import UIKit
 
 extension URLSession {
     func fetchImage(from url: URL) -> AnyPublisher<UIImage?, Never> {
-        return dataTaskPublisher(for: url)
-            .tryMap { data, response -> UIImage in
+        dataTaskPublisher(for: url)
+            .tryMap { data, _ -> UIImage in
                 UIImage(data: data)!
             }
             .replaceError(with: nil)

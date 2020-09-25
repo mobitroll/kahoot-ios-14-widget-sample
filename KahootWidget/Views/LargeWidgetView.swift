@@ -9,7 +9,6 @@ import SwiftUI
 import WidgetKit
 
 struct LargeWidgetView: View {
-
     let discoverGroup: DiscoverGroup
 
     var body: some View {
@@ -53,14 +52,11 @@ struct LargeWidgetView: View {
                     }
                 }
                 .padding(8)
-
-
             }
             .background(Color("CardBackground"))
             .cornerRadius(4)
 
             ButtonRowView()
-
         }
         .padding()
         .background(Color("MediumAndLargeWidgetBackground"))
@@ -69,7 +65,6 @@ struct LargeWidgetView: View {
 
 struct LargeWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-
         let discoverGroup = DiscoverGroup(cardTitle: "World architecture",
                                           coverImage: Image("DummyImage"),
                                           creatorAvatarImage: nil,
